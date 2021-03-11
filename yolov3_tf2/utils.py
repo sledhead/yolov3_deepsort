@@ -157,7 +157,7 @@ def freeze_all(model, frozen=True):
         for l in model.layers:
             freeze_all(l, frozen)
 
-def convert_boxes(image, boxes):
+def convert_boxes_sp(image, boxes):
     returned_boxes = []
     for box in boxes:
         box[0] = (box[0] * image.shape[1]).astype(int)
